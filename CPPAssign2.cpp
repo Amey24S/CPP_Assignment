@@ -5,14 +5,14 @@ using namespace std;
 class charInput
 {
 public:
-    string s = "";
+    string str = "";
     void add(char c)
     {
-        s = s + (c);
+        str = str + (c);
     }
     std::string getValue()
     { 
-        return s; 
+        return str; 
     }
 };
 
@@ -21,17 +21,17 @@ class numInput : public charInput
     public:
         string getValue()
         {
-            return numInput::s;
+            return numInput::str;
         }
 
-        void add(char e){
-            if(e >= 'a' && e <= 'z')
+        void add(char ch){
+            if(ch >= 'a' && ch <= 'z')
             {
                 return;
             }
             else
             {
-                charInput::add(e);
+                charInput::add(ch);
             }
         }
 
@@ -45,6 +45,6 @@ int main()
     inputN->add('a');
     inputN->add('0');
     cout << inputN->getValue();
-// the output should be 10
-   
+
+return 0;   
 }
